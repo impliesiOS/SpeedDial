@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ABx-eT-22R">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DialVC-->
+        <scene sceneID="LSg-WE-8iR">
+            <objects>
+                <viewController storyboardIdentifier="DialVC" id="ABx-eT-22R" customClass="DialVC" customModule="SpeedDial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iPm-Zt-JnW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUo-z7-HxT">
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ABx-eT-22R" id="hq6-ei-qed"/>
+                                    <outlet property="delegate" destination="ABx-eT-22R" id="bck-7S-yXX"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dial Now Hurry Up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVx-YY-lr0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="UO0-Wb-H9M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sZw-a4-IaH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CVx-YY-lr0" firstAttribute="leading" secondItem="NUo-z7-HxT" secondAttribute="leading" id="CbJ-wG-yQE"/>
+                            <constraint firstItem="CVx-YY-lr0" firstAttribute="trailing" secondItem="NUo-z7-HxT" secondAttribute="trailing" id="FqI-2i-AH3"/>
+                            <constraint firstItem="NUo-z7-HxT" firstAttribute="leading" secondItem="sZw-a4-IaH" secondAttribute="leading" id="cNt-cM-ldx"/>
+                            <constraint firstItem="CVx-YY-lr0" firstAttribute="top" secondItem="sZw-a4-IaH" secondAttribute="top" id="lFx-u6-xND"/>
+                            <constraint firstItem="NUo-z7-HxT" firstAttribute="top" secondItem="CVx-YY-lr0" secondAttribute="bottom" constant="1" id="r8t-Kl-aAJ"/>
+                            <constraint firstItem="NUo-z7-HxT" firstAttribute="trailing" secondItem="sZw-a4-IaH" secondAttribute="trailing" id="vsD-I4-fwK"/>
+                            <constraint firstItem="NUo-z7-HxT" firstAttribute="bottom" secondItem="sZw-a4-IaH" secondAttribute="bottom" id="wQk-9u-NAD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LBL_Heading" destination="CVx-YY-lr0" id="9mX-ZK-zxY"/>
+                        <outlet property="TBL_callers" destination="NUo-z7-HxT" id="WJ6-Oa-Pxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAe-mP-QUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55.200000000000003" y="16.641679160419791"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
